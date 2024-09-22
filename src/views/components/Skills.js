@@ -21,7 +21,6 @@ export default function Skills({ skillList, attributes, skillAllocations, setSki
         setSkillAllocations((prev) => ({ ...prev, ...initialAllocations }));
     }, [setSkillAllocations, skillList, skillAllocations]);
 
-    // Use calculateModifier for skill modifiers as well
     const getTotalSkillValue = (skill) => {
         const pointsSpent = skillAllocations[skill.name] || 0;
         const modifier = attributes[skill.attributeModifier] ? calculateModifier(attributes[skill.attributeModifier]) : 0;
